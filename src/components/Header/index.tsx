@@ -3,7 +3,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 export default function Header() {
     return (
-        <div className="flex justify-center items-center w-full">
+        <div className="flex mt-3 justify-center items-center w-full">
             <div className="w-[95%] flex justify-between items-center">
                 <div className="bg-[#141414] flex justify-center items-center w-[465px] rounded-md px-3">
                     <Icon.MagnifyingGlass
