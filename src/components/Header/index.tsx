@@ -1,6 +1,7 @@
 import { Input } from "../ui/input";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
+
 export default function Header() {
     return (
         <div className="flex mt-3 justify-center items-center w-full">
