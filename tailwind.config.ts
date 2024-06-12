@@ -55,7 +55,9 @@ const config = {
         'white': '#ffffff',
         'gray-dark': '#141414',
         'gray-light': '#BABABA',
-        'green-tridar': '#CFFA61',
+        'green-tridar-light': '#CFFA61',
+        'green-tridar': '#B7FF00',
+        'red': '#FF6161',
 
       },
       borderRadius: {
