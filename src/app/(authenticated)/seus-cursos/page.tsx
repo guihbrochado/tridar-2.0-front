@@ -17,8 +17,7 @@ export default function SeusCursos() {
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Podcast </button>
             </div>
 
-{/* 
-            <div className="rounded-lg overflow-hidden mt-10 relative before:absolute before:z-20 before:bg-black before:h-full before:w-full before:bg-gradient-to-tr before:from-black before:to-emerald-600 before:opacity-80">
+            {/* <div className="rounded-lg overflow-hidden mt-10 relative before:absolute before:z-20 before:bg-black before:h-full before:w-full before:bg-gradient-to-tr before:from-black before:to-emerald-600 before:opacity-80">
                 <img src="https://picsum.photos/300/200" className="absolute z-10 object-cover h-80 w-full h-full" alt="" />
                 <a href="" className="absolute z-20  top-1/2  right-20 text-white -translate-y-1/2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-20 h-20">
@@ -30,9 +29,7 @@ export default function SeusCursos() {
                     <h2 className="text-white text-3xl font-semibold">ASA fitoriana ny filazantsara iarivo avaradrano</h2>
                     <h3 className="text-white text-xl">Docteur Irako Andriamahasoa Ammi</h3>
                 </div>
-
             </div> */}
-
 
             <div className="w-full p-4 gap-3 flex flex-row justify-between">
                 <div className="w-3/4 flex flex-col gap-4">
