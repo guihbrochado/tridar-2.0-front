@@ -17,7 +17,7 @@ export default function Suggestions() {
                 </div>
             </div>
             <div className="flex w-[100%] items-start justify-center gap-6">
-                <div className="grid w-[40%] items-center gap-3">
+                <div className="grid w-[40%] items-center gap-3 border border-gray-dark p-4 rounded">
                     <div className="flex items-center w-full">
                         <InputWithLabel
                             label="Nome completo"
@@ -86,7 +86,7 @@ export default function Suggestions() {
                             />
                         </div>
                     </div>
-                    <Button className="px-2 py-1 bg-green-tridar text-black text-xs :hover:bg-green-800 mt-6">Enviar Sugestão</Button>
+                    <Button className="px-2 py-1 bg-white text-black text-xs :hover:bg-green-800 mt-6">Enviar Sugestão</Button>
 
                 </div>
 
