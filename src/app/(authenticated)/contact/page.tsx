@@ -16,7 +16,7 @@ export default function Videos() {
                     <p className=" mx-2 text-white text-xl mb-2 font-bold">Contato</p>
                 </div>
             </div>
-            <div className="grid w-[50%] items-center gap-3">
+            <div className="grid w-[50%] items-center gap-3 border border-gray-dark p-4 rounded">
                 <div className="flex items-center w-full">
                     <InputWithLabel
                         label="Nome completo"
@@ -115,7 +115,7 @@ export default function Videos() {
                         />
                     </div>
                 </div>
-                <Button className="px-2 py-1 bg-green-tridar text-black text-xs :hover:bg-green-800 mt-6">Enviar</Button>
+                <Button className="px-2 py-1 bg-white text-black text-xs :hover:bg-green-800 mt-6">Enviar</Button>
 
             </div>
         </div>

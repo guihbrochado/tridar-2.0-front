@@ -18,13 +18,13 @@ export default function UsagePolicies() {
             </div>
             <div className="flex w-[100%] items-start justify-center gap-6">
                 <div className="grid w-[70%] items-center gap-3">
-                    <div className="  w-full gap-3 bg-gray-bg-card p-3 rounded">
+                    <div className="  w-full gap-3 bg-gray-bg-card p-3 rounded border border-[#141414]">
                         <div className="flex items-center justify-start gap-3">
 
                             <div className="flex items-center justify-center w-[40px] h-[40px] bg-gray-tridar rounded">
                                 <Icon.Info
                                     size={21}
-                                    color='#B7FF00'
+                                    color='white'
                                 />
                             </div>
 
@@ -54,7 +54,7 @@ export default function UsagePolicies() {
                 </div>
 
                 <div className="w-[30%] items-start justify-start">
-                    <div className=" flex w-full gap-3 bg-gray-bg-card p-6 rounded">
+                    <div className=" flex w-full gap-3 p-6 rounded border border-gray-dark">
                         <div className="w-full">
                             <h3 className="text-white text-base ">
                                 Lorem Ipsum consectetur adipiscing?
