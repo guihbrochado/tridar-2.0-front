@@ -59,6 +59,7 @@ const config = {
         'gray-light-3': '#3A3A3A',
         'green-tridar-light': '#CFFA61',
         'green-tridar': '#B7FF00',
+        'blue-tridar': '#00C2FF',
         'red': '#FF6161',
         'gray-tridar': '#1C1C1C',
         'gray-bg-card': '#0F0F0F'

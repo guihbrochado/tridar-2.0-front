@@ -68,7 +68,7 @@ export default function CursoAssistir() {
                 </div>
             </div>
             <div className="flex flex-row mb-4">
-                <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-green-tridar text-sm"> Descrição </div>
+                <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-blue-tridar text-sm"> Descrição </div>
                 <div className="mx-1 py-2 px-4 rounded text-white text-sm"> Materiais </div>
                 <div className="mx-1 py-2 px-4 rounded text-white text-sm"> Comentários </div>
             </div>

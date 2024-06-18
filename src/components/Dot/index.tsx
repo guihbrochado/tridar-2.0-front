@@ -1,6 +1,6 @@
 export default function Dot() {
     return (
-        <span className="text-green-tridar">•</span>
+        <span className="text-blue-tridar">•</span>
       
     );
 }
