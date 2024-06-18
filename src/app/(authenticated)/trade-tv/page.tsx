@@ -36,9 +36,8 @@ export default function TradeTv() {
                         </div>
                     </div>
                     <div className="flex flex-row mb-4 ">
-                        <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-blue-tridar text-sm"> Descrição </div>
+                        <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-white text-sm"> Descrição </div>
                         <span className="flex items-center mx-1 py-2 px-4 rounded text-white text-sm bg-gray-dark"> <Icon.User className=" text-white mr-2" size={20} /> Seguir </span>
-
                     </div>
 
                     <div className="flex flex-row">

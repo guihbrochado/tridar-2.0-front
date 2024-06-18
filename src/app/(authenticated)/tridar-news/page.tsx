@@ -83,7 +83,7 @@ export default function TridarNews() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
                     <div className="bg-gray-dark rounded ">
                         <img
-                            src="https://picsum.photos/200/"
+                            src="https://picsum.photos/200/100"
                             alt=""
                             className="w-full h-auto object-contain rounded-t rounded-lg "
                         />
@@ -96,7 +96,7 @@ export default function TridarNews() {
                     </div>
                     <div className="bg-gray-dark rounded ">
                         <img
-                            src="https://picsum.photos/200"
+                            src="https://picsum.photos/200/100"
                             alt=""
                             className="w-full h-auto object-contain rounded-t rounded-lg "
                         />
@@ -109,7 +109,7 @@ export default function TridarNews() {
                     </div>
                     <div className="bg-gray-dark rounded ">
                         <img
-                            src="https://picsum.photos/200//"
+                            src="https://picsum.photos/200/100/"
                             alt=""
                             className="w-full h-auto object-contain rounded-t rounded-lg "
                         />
@@ -122,7 +122,7 @@ export default function TridarNews() {
                     </div>
                     <div className="bg-gray-dark rounded ">
                         <img
-                            src="https://picsum.photos/200////"
+                            src="https://picsum.photos/200/100/"
                             alt=""
                             className="w-full h-auto object-contain rounded-t rounded-lg "
                         />
@@ -135,7 +135,7 @@ export default function TridarNews() {
                     </div>
                     <div className="bg-gray-dark rounded ">
                         <img
-                            src="https://picsum.photos/200///"
+                            src="https://picsum.photos/200/100/"
                             alt=""
                             className="w-full h-auto object-contain rounded-t rounded-lg "
                         />
