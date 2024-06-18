@@ -4,6 +4,7 @@ import Dot from "@/components/Dot";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import CardSugestões from "@/components/CardSugestões";
 import { Button } from "@/components/ui/button";
+import CalendarPage from "@/components/CalendarPage";
 
 export default function Calendar() {
     return (
@@ -55,6 +56,7 @@ export default function Calendar() {
                 <div className="flex w-[100%] items-start justify-center gap-6">
                     <div className="grid w-[70%] items-center gap-3 border border-gray-dark p-4 rounded ">
                         <p className="mx-2 text-white text-ms mb-2 font-bold">Calendario aqui</p>
+                        <CalendarPage />
                     </div>
 
                     <div className="w-[30%] items-start justify-start">
