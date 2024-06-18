@@ -60,6 +60,8 @@ const config = {
         'green-tridar-light': '#CFFA61',
         'green-tridar': '#B7FF00',
         'red': '#FF6161',
+        'gray-tridar': '#1C1C1C',
+        'gray-bg-card': '#0F0F0F'
 
       },
       borderRadius: {

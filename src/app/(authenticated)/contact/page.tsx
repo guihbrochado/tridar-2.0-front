@@ -3,18 +3,23 @@ import React from "react";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
+import { Button } from "@/components/ui/button";
+import Dot from "@/components/Dot";
 
 export default function Videos() {
     return (
         <div className="container py-9">
             <div className="container mx-auto p-4">
                 <p className="text-gray-light text-sm mb-1">Entre em contato conosco 😎</p>
-                <p className="text-white text-xl mb-2 font-bold">Contato</p>
+                <div className="flex">
+                    <Dot />
+                    <p className=" mx-2 text-white text-xl mb-2 font-bold">Contato</p>
+                </div>
             </div>
             <div className="grid w-[50%] items-center gap-3">
                 <div className="flex items-center w-full">
                     <InputWithLabel
-                        label="Nome completo *"
+                        label="Nome completo"
                         placeholder="Digite seu nome..."
                         type="name"
                         children={
@@ -27,7 +32,7 @@ export default function Videos() {
                 </div>
                 <div className="flex items-center w-full">
                     <InputWithLabel
-                        label="CPF/CNPJ *"
+                        label="CPF/CNPJ"
                         placeholder="Digite seu nome..."
                         type="name"
                         children={
@@ -41,7 +46,7 @@ export default function Videos() {
                 <div className="flex w-full items-center gap-2">
                     <div className="flex items-center w-full">
                         <InputWithLabel
-                            label="Seu e-mail *"
+                            label="Seu e-mail"
                             placeholder="Digite seu nome..."
                             type="name"
                             children={
@@ -55,7 +60,7 @@ export default function Videos() {
 
                     <div className="flex w-full items-center">
                         <InputWithLabel
-                            label="Telefone *"
+                            label="Telefone"
                             placeholder="Digite seu nome..."
                             type="name"
                             children={
@@ -70,7 +75,7 @@ export default function Videos() {
                 <div className="flex w-full items-center gap-2">
                     <div className="flex items-center w-full">
                         <InputWithLabel
-                            label="Seu segmento *"
+                            label="Seu segmento"
                             placeholder="Digite seu nome..."
                             type="name"
                             children={
@@ -84,7 +89,7 @@ export default function Videos() {
 
                     <div className="flex w-full items-center">
                         <InputWithLabel
-                            label="Nome da empresa *"
+                            label="Nome da empresa"
                             placeholder="Digite seu nome..."
                             type="name"
                             children={
@@ -110,6 +115,8 @@ export default function Videos() {
                         />
                     </div>
                 </div>
+                <Button className="px-2 py-1 bg-green-tridar text-black text-xs :hover:bg-green-800 mt-6">Enviar</Button>
+
             </div>
         </div>
     );
