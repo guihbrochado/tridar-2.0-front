@@ -19,9 +19,9 @@ export default function Curso() {
             <Hero />
 
             <div className="flex flex-row p-4 ">
-                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 1 ? 'bg-gray-light-2 text-green-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(1)}>Informações</button>
-                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 2 ? 'bg-gray-light-2 text-green-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(2)}>Conteúdo</button>
-                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 3 ? 'bg-gray-light-2 text-green-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(3)}>Avaliações</button>
+                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 1 ? 'bg-gray-light-2 text-blue-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(1)}>Informações</button>
+                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 2 ? 'bg-gray-light-2 text-blue-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(2)}>Conteúdo</button>
+                <button className={`mx-1 py-2 px-4 rounded text-sm ${divActive === 3 ? 'bg-gray-light-2 text-blue-tridar' : 'bg-gray-dark text-white'}`} onClick={() => setDivActive(3)}>Avaliações</button>
             </div>
             {divActive === 1 &&
                 <>
@@ -69,10 +69,10 @@ export default function Curso() {
                                         <div className="flex flex-row justify-between w-full items-center">
                                             <div className="flex flex-row">
                                                 <span> Título do modulo </span>
-                                                <span className="p-2 ml-2 text-xs bg-gray-light-3 text-green-tridar rounded">14 Aulas</span>
+                                                <span className="p-2 ml-2 text-xs bg-gray-light-3 text-blue-tridar rounded">14 Aulas</span>
                                             </div>
                                             <div className="flex flex-row gap-3">
-                                                {/* <Icon.Play className="bg-green-tridar text-white p-2 rounded" size={20} />
+                                                {/* <Icon.Play className="bg-blue-tridar text-white p-2 rounded" size={20} />
                                              <Icon.CaretCircleDown className="align-end" size={20} /> */}
                                             </div>
                                         </div>
@@ -92,15 +92,15 @@ export default function Curso() {
                 divActive === 3 &&
                 <>
                     <div className="flex flex-col w-3/4 md:flex-row justify-between p-4 space-y-4 md:space-y-0 md:space-x-4">
-                        <h6 className="text-white font-bold ml-4 my-4"><Dot /> Avaliações <span className="bg-green-tridar text-black px-2 py-1 text-xs rounded">03</span></h6>
+                        <h6 className="text-white font-bold ml-4 my-4"><Dot /> Avaliações <span className="bg-blue-tridar text-black px-2 py-1 text-xs rounded">03</span></h6>
 
                         <div className="flex flex-row items-center gap-3 p-4">
                             <h6 className="text-white font-bold"> 4.9</h6>
-                            <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                            <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                            <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                            <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                            <Icon.Star size={17} className="text-white hover:text-green-tridar" />
+                            <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                            <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                            <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                            <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                            <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between p-4 space-y-4 md:space-y-0 md:space-x-4">
@@ -110,11 +110,11 @@ export default function Curso() {
                                 <img src="../../../assets/images/svg/iconPerfil.svg" alt="User" />
                                 <Input className="w-full bg-gray-dark text-white border-none" placeholder="Publique sua avaliação..." type="text" />
                                 <div className="flex flex-row items-center gap-3">
-                                    <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                    <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                    <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                    <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                    <Icon.Star size={17} className="text-white hover:text-green-tridar" />
+                                    <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                    <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                    <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                    <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                    <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
                                 </div>
                             </div>
                             <div className="flex flex-row items-center gap-4 bg-gray-dark rounded p-4 mb-4">
@@ -124,11 +124,11 @@ export default function Curso() {
                                         <div className="flex flex-row gap-3">
                                             <h6 className="text-white font-bold w-full">Sophia Costa</h6>
                                             <div className="flex items-center gap-3">
-                                                <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                                <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                                <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                                <Icon.Star size={17} className="text-white hover:text-green-tridar" />
-                                                <Icon.Star size={17} className="text-white hover:text-green-tridar" />
+                                                <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                                <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                                <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                                <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
+                                                <Icon.Star size={17} className="text-white hover:text-blue-tridar" />
                                             </div>
                                         </div>
                                         <p className="text-gray-light text-sm w-full ">Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem </p>

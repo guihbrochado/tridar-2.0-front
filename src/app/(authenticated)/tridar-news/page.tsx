@@ -16,10 +16,9 @@ export default function TridarNews() {
                     <iframe
                         src="https://www.youtube.com/embed/VhnNSZHGYFE?si=PEwRU_eVaWBLn6sR"
                         title="YouTube video player"
-                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
                         className="w-full h-full"
                     ></iframe>
                 </div>
@@ -46,7 +45,7 @@ export default function TridarNews() {
                     </div>
                     <div className="flex flex-row mt-2">
                         <input className="focus:outline-none w-full rounded-r rounded-lg p-2 text-sm bg-gray-dark text-gray-light" placeholder="Digite sua mensagem..." />
-                        <button className="bg-green-tridar text-white rounded-r p-3">
+                        <button className="bg-white text-white rounded-r p-3">
                             <Icon.PaperPlaneTilt size={17} color="black" />
                         </button>
                     </div>
@@ -56,11 +55,11 @@ export default function TridarNews() {
                         <div className="flex flex-row justify-between items-center rounded p-2 text-center gap-5 mt-3 w-full bg-gray-dark">
                             <h6 className="text-white text-sm ">O que achou dessa aula?</h6>
                             <div className="flex flex-row ">
-                            <Icon.SmileyAngry size={25} className="text-gray-light" />
-                            <Icon.SmileySad size={25} className="text-gray-light" />
-                            <Icon.SmileyMeh size={25} className="text-gray-light" />
-                            <Icon.Smiley size={25} className="text-gray-light" />
-                            <Icon.SmileyXEyes size={25} className="text-green-tridar" />
+                                <Icon.SmileyAngry size={25} className="text-gray-light" />
+                                <Icon.SmileySad size={25} className="text-gray-light" />
+                                <Icon.SmileyMeh size={25} className="text-gray-light" />
+                                <Icon.Smiley size={25} className="text-gray-light" />
+                                <Icon.SmileyXEyes size={25} className="text-white" />
                             </div>
                         </div>
                     </div>
@@ -74,7 +73,7 @@ export default function TridarNews() {
                 <div className="flex flex-row justify-between p-4">
                     <h2 className="text-white text-xl mb-4 font-bold"> <Dot /> Últimos Lançamentos</h2>
                     <div className="flex flex-row">
-                        <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-green-tridar text-sm"> Todos </div>
+                        <div className="mx-1 py-2 px-4 rounded bg-gray-dark text-white text-sm"> Todos </div>
                         <div className="mx-1 py-2 px-4 rounded text-white text-sm"> Seguindo </div>
                         <div className="mx-1 py-2 px-4 rounded text-white text-sm"> Canais </div>
                         <div className="mx-1 py-2 px-4 rounded text-white text-sm"> Trade TV </div>

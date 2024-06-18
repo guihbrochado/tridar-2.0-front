@@ -13,7 +13,7 @@ export default function SeusCursos() {
             </div>
 
             <div className="flex flex-row p-4">
-                <button className="mx-1 py-2 px-4 rounded bg-gray-dark text-green-tridar text-sm"> Seus Cursos </button>
+                <button className="mx-1 py-2 px-4 rounded bg-gray-dark text-blue-tridar text-sm"> Seus Cursos </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Sala ao Vivo </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Mentoria Black </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Podcast </button>
@@ -34,18 +34,29 @@ export default function SeusCursos() {
             </div> */}
 
             <div className="flex flex-col md:flex-row justify-between p-4 space-y-4 md:space-y-0 md:space-x-4">
-                <div className="flex w-full md:w-3/4">
+                <div className="flex flex-row w-full md:w-3/4">
                     <div className="flex flex-row">
-                        <img src="https://picsum.photos/400/100" alt="" />
+                        <img className="h-48" src="https://picsum.photos/400/100" alt="" />
                     </div>
 
-                    <div className="flex flex-col p-4">
-                        <h2 className="text-white text-xl font-thin uppercase">Nome do</h2>
+                    <div className="flex flex-col p-4 w-full">
+                        <div className="flex flex-row justify-between">
+                            <h2 className="text-white text-xl font-thin uppercase">Nome do</h2>
+                            <p className="text-white text-sm mr-4">13 Aulas</p>
+                        </div>
                         <h3 className="text-white text-3xl font-bold uppercase">Curso</h3>
-
-                        <p className="text-white text-xs mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p className="text-white text-sm mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div className="flex flex-row gap-2 items-end justify-between mt-4">
+                            <div className="flex flex-row items-end gap-1">
+                                <p className="text-gray-light mb-1 ">Progresso:</p>
+                                <span className="text-3xl text-white font-bold">35%</span>
+                            </div>
+                            <div className="flex flex-row items-end gap-1">
+                                <span className="px-5 py-2 rounded bg-white text-black flex items-center gap-2"> <Icon.Play size={17} className="text-black" /> Assistir</span>
+                                <span className="px-5 py-2 rounded bg-transparent text-gray-light flex items-center gap-2"> <Icon.Plus size={17} className="text-gray-light" /> Assistir</span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
                 <CourseCardInfo />
             </div>

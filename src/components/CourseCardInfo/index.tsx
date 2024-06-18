@@ -14,7 +14,7 @@ export default function CourseCardInfo() {
                 </div>
                 <div className="flex flex-row items-center">
                     <h6 className="mt-1 text-xs text-gray-light">Progresso:</h6>
-                    <h6 className="text-xl text-green-tridar">35%</h6>
+                    <h6 className="text-xl text-blue-tridar">35%</h6>
                 </div>
             </div>
             <div className="flex flex-row justify-between items-center text-gray-light">
@@ -27,7 +27,7 @@ export default function CourseCardInfo() {
                 </div>
             </div>
             
-        <Button className="px-2 py-1 bg-green-tridar text-black text-xs :hover:bg-green-800"> Entrar no Curso </Button>
+        <Button className="px-2 py-1 bg-blue-tridar text-black text-xs :hover:bg-green-800"> Entrar no Curso </Button>
         <Button className="px-2 py-1 bg-gray-dark text-xs text-white"> Aulas Salvas </Button>
         </div>
     );

@@ -10,7 +10,7 @@ export default function Videos() {
                 <p className="text-white text-xl mb-2 font-bold">Vídeos</p>
             </div>
             <div className="flex flex-row p-4">
-                <button className="mx-1 py-2 px-4 rounded bg-gray-dark text-green-tridar text-sm"> Explorar </button>
+                <button className="mx-1 py-2 px-4 rounded bg-gray-dark text-white text-sm"> Explorar </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Seguindo </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Estações </button>
                 <button className="mx-1 py-2 px-4 rounded text-white text-sm"> Trade TV </button>
