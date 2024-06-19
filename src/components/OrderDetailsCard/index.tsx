@@ -60,7 +60,7 @@ export default function OrderDetailsCard() {
 
                 </div>
                 <div className="flex flex-row items-center ">
-                    <input className="focus:outline-none  rounded-r rounded-lg p-2 text-xs bg-gray-dark text-gray-light" placeholder="Digite sua mensagem..." />
+                    <input className="focus:outline-none  rounded-r rounded-lg p-2 text-xs bg-gray-dark text-gray-light" placeholder="Cupom de desconto..." />
                     <button className="bg-white text-white rounded-r p-2">
                         <Icon.CheckFat weight="fill" size={17} color="black" />
                     </button>
@@ -72,12 +72,8 @@ export default function OrderDetailsCard() {
             <div className="w-full justify-center items-center flex gap-2">
                 <Icon.Lock size={17} className="text-gray-light" />
                 <p className="flex text-white text-xs"> Compra protegida com certificado SSL</p>
-
             </div>
         </div>
-
-
-
     );
 }
 
