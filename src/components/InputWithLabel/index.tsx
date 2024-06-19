@@ -16,7 +16,7 @@ export function InputWithLabel({ label, placeholder, type, children }: PropsInpu
             <Label className="text-white" htmlFor={label}> {label} <Dot /> </Label>
             <div className="bg-gray-dark flex justify-center items-center rounded-md px-3 mt-2">
                 {children}
-                <Input className="bg-gray-dark border-none" type={type} placeholder={placeholder} />
+                <Input className="bg-gray-dark border-none text-white" type={type} placeholder={placeholder} />
             </div>
         </div>
     )

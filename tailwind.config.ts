@@ -61,9 +61,6 @@ const config = {
         'green-tridar': '#B7FF00',
         'blue-tridar': '#00C2FF',
         'red': '#FF6161',
-        'gray-tridar': '#1C1C1C',
-        'gray-bg-card': '#0F0F0F',
-        'black-tridar-100': '#080808'
 
       },
       borderRadius: {
