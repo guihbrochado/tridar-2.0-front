@@ -22,12 +22,27 @@
     color: #141414;
     opacity: 50%;
 }
-.rbc-off-day-bg{
-    color: red;
+.rbc-month-row + .rbc-month-row{
+    border-left: 1px solid #141414;
+    border-right: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+}
+.rbc-month-view{
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
 }
 .rbc-day-bg + .rbc-day-bg{
     border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
 }
 .rbc-day-bg {
     border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
 }

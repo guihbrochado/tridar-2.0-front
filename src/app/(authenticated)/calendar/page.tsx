@@ -55,7 +55,6 @@ export default function Calendar() {
 
                 <div className="flex w-[100%] items-start justify-center gap-6">
                     <div className="grid w-[70%] items-center gap-3 border border-gray-dark p-4 rounded ">
-                        <p className="mx-2 text-white text-ms mb-2 font-bold">Calendario aqui</p>
                         <CalendarPage />
                     </div>
 
