@@ -1,3 +1,48 @@
 .calendar{
     height: 90vh;
 }
+.rbc-toolbar {
+    display: none;
+}
+.rbc-header + .rbc-header {
+    border-left: none;
+    background-color: #080808;
+    color: white;
+}
+.rbc-header {
+    border: none;
+    color: white;
+}
+/* Corpo caledario */
+.rbc-date-cell {
+    color: white;
+}
+.rbc-off-range-bg {
+    background: #141414;
+    color: #141414;
+    opacity: 50%;
+}
+.rbc-month-row + .rbc-month-row{
+    border-left: 1px solid #141414;
+    border-right: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+}
+.rbc-month-view{
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
+}
+.rbc-day-bg + .rbc-day-bg{
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
+}
+.rbc-day-bg {
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+    border-right: 1px solid #141414;
+}
