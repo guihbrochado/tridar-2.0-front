@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'white': '#ffffff',
+        'gray-dark': '#141414',
+        'gray-light': '#BABABA',
+        'gray-light-2': '#303030',
+        'gray-light-3': '#3A3A3A',
+        'green-tridar-light': '#CFFA61',
+        'green-tridar': '#B7FF00',
+        'blue-tridar': '#00C2FF',
+        'red': '#FF6161',
+
       },
       borderRadius: {
         lg: "var(--radius)",
