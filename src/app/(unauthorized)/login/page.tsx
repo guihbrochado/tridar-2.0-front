@@ -1,4 +1,5 @@
 "use client"
+
 import clientAxios from '@/lib/axios/clientAxios';
 import { useState } from 'react';
 
@@ -8,7 +9,7 @@ export default function Login() {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = async (e) => {
+    const handleLogin = async (e: any) => {
         e.preventDefault();
         setIsLoading(true);
 
@@ -21,7 +22,7 @@ export default function Login() {
             // Processar a resposta conforme necessário
             console.log(response.data);
             setIsLoading(false);
-        } catch (error) {
+        } catch (error: any) {
             console.error('Erro no login:', error);
             if (error.response) {
                 // A requisição foi feita e o servidor respondeu com um código de status
