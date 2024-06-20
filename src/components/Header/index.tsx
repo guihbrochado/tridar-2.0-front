@@ -1,6 +1,14 @@
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { NavigationMenuDemo } from "../NavigationMenuDemo";
 import Link from "next/link";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
     return (
@@ -21,9 +29,20 @@ export default function Header() {
                     <Icon.BellSimple size={21} color="white" />
                     <Icon.Question size={21} color="white" />
                     <div className="flex justify-end items-center ">
-                        <img src="/Perfil.png" alt="persona" />
-                        {/* <h3 className="px-6 text-[#BABABA] text-xs ">Olá, Luis</h3> */}
-                        {/* <Icon.CaretDown size={21} color="gray" /> */}
+                        <DropdownMenu>
+                            <DropdownMenuTrigger>
+                                <img src="/Perfil.png" alt="persona" />
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="bg-dark text-white" >
+                                <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+                                <DropdownMenuSeparator />
+                                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                                <DropdownMenuItem>Definição</DropdownMenuItem>
+                                <DropdownMenuItem>Meus cursos</DropdownMenuItem>
+                                <DropdownMenuItem className="bg-red text-white">Sair</DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+
                     </div>
                 </div>
             </div>
