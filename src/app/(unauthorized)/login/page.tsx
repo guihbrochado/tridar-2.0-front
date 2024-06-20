@@ -1,7 +1,6 @@
 "use client"
-
-import React, { useState } from 'react';
-import axios from 'axios';
+import clientAxios from '@/lib/axios/clientAxios';
+import { useState } from 'react';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -9,30 +8,30 @@ export default function Login() {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = async (e: any) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://homologacao.tridar.log.br/login', {
+            const response = await clientAxios.post('/login', {
                 email,
                 password
             });
 
-            // Process the response as needed
+            // Processar a resposta conforme necessário
             console.log(response.data);
             setIsLoading(false);
-        } catch (error: any) {
+        } catch (error) {
             console.error('Erro no login:', error);
             if (error.response) {
-                // A request was made and the server responded with a status code
-                // that falls out of the range of 2xx
+                // A requisição foi feita e o servidor respondeu com um código de status
+                // que não está no intervalo 2xx
                 setError('Erro no login. Verifique suas credenciais e tente novamente.');
             } else if (error.request) {
-                // The request was made but no response was received
+                // A requisição foi feita, mas não recebeu resposta
                 setError('Erro de rede. Por favor, verifique sua conexão.');
             } else {
-                // Something happened in setting up the request that triggered an Error
+                // Algo aconteceu ao configurar a requisição que disparou um erro
                 setError('Erro desconhecido. Por favor, tente novamente.');
             }
             setIsLoading(false);
@@ -73,7 +72,8 @@ export default function Login() {
                     {error && <p className="text-red-500 mb-4">{error}</p>}
                     <button
                         type="submit"
-                        className={`w-full bg-blue-500 text-white py-2 rounded-md transition duration-200 ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'}`}
+                        className={`w-full bg-blue-500 text-white py-2 rounded-md transition duration-200 ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+                            }`}
                         disabled={isLoading}
                     >
                         {isLoading ? 'Carregando...' : 'Entrar'}
@@ -83,4 +83,3 @@ export default function Login() {
         </div>
     );
 }
-
