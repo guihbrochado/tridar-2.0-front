@@ -5,7 +5,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 export default function TridarNews() {
     return (
-        <div className="w-full px-10 mt-5">
+        <div className="max-w-1680 mx-10">
             <div className="p-4">
                 <p className="text-gray-light text-sm mb-1">Acompanhe todas as notícias 📹</p>
                 <p className="text-white text-xl mb-2 font-bold">Tridar News</p>

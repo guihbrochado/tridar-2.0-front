@@ -1,7 +1,7 @@
 import React from "react";
 import Dot from "../../../components/Dot";
 import { Input } from "../../../components/ui/input";
-import * as Icon from "@phosphor-icons/react/dist/ssr";
+import * as Icon from "@phosphor-icons/react/dist/ssr"; 
 import {
     Collapsible, CollapsibleContent,
     CollapsibleTrigger
