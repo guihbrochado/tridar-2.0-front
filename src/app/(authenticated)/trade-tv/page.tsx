@@ -10,7 +10,7 @@ import {
 
 export default function TradeTv() {
     return (
-        <div className="w-full px-10 mt-5">
+        <div className="max-w-1680 mx-10 px-10 mt-5">
             <div className="p-4">
                 <p className="text-gray-light text-sm mb-1">Acompanhe todas as notícias 📹</p>
                 <p className="text-white text-xl mb-2 font-bold">Trade Tv </p>

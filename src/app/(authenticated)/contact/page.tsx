@@ -8,7 +8,7 @@ import Dot from "@/components/Dot";
 
 export default function Videos() {
     return (
-        <div className="container py-9">
+        <div className="container max-w-1680 py-9">
             <div className="container mx-auto p-4">
                 <p className="text-gray-light text-sm mb-1">Entre em contato conosco 😎</p>
                 <div className="flex">

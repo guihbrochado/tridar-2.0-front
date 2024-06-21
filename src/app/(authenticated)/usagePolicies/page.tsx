@@ -8,7 +8,7 @@ import CardSugestões from "@/components/CardSugestões";
 
 export default function UsagePolicies() {
     return (
-        <div className="container py-9">
+        <div className="container max-w-1680  py-9">
             <div className="container mx-auto p-4">
                 <p className="text-gray-light text-sm mb-1">Conheça nossas políticas 🥇</p>
                 <div className="flex">

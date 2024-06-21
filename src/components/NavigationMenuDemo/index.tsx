@@ -203,11 +203,11 @@ export function NavigationMenuDemo() {
         <NavigationMenu>
             <NavigationMenuList>
                 {menuItems.map((menu, index) => (
-                    <NavigationMenuItem key={index} className="flex">
-                        <NavigationMenuTrigger className="bg-transparent text-white hover:bg-transparent">
+                    <NavigationMenuItem key={index} className="flex w-full">
+                        <NavigationMenuTrigger className="bg-transparent text-white">
                             {menu.title}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                        <NavigationMenuContent >
                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                 {menu.components.map((component, idx) => (
                                     <ListItem

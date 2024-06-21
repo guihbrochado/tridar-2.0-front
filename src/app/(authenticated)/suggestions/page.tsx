@@ -8,7 +8,7 @@ import CardSugestões from "@/components/CardSugestões";
 
 export default function Suggestions() {
     return (
-        <div className="container py-9">
+        <div className="container max-w-1680 py-9">
             <div className="container mx-auto p-4">
                 <p className="text-gray-light text-sm mb-1">Ajude-nos a melhorar a plataforma 🚀</p>
                 <div className="flex">
