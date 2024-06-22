@@ -1,3 +1,5 @@
+"use client"
+
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { NavigationMenuDemo } from "../NavigationMenuDemo";
 import Link from "next/link";
@@ -9,8 +11,23 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLoginStore } from "@/zustand/StoreAuth/store";
+import Cookies from 'js-cookie';
 
 export default function Header() {
+    const { setUserInfo } = useLoginStore();
+
+    const handleLogout = () => {
+        // Limpar o cookie de accessToken
+        Cookies.remove('accessToken');
+
+        // Limpar informações do usuário
+        setUserInfo(null);
+
+        // Redirecionar para a página de login
+        window.location.replace('/login');
+    };
+
     return (
         <div className="flex mt-3 justify-center items-center w-full">
             <div className="w-[95%] flex justify-between items-center">
@@ -39,7 +56,7 @@ export default function Header() {
                                 <DropdownMenuItem>Perfil</DropdownMenuItem>
                                 <DropdownMenuItem>Definição</DropdownMenuItem>
                                 <DropdownMenuItem>Meus cursos</DropdownMenuItem>
-                                <DropdownMenuItem className="bg-red text-white">Sair</DropdownMenuItem>
+                                <DropdownMenuItem onClick={handleLogout} className="bg-red text-white">Sair</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
 
