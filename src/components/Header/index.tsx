@@ -55,13 +55,12 @@ export default function Header() {
                                 <DropdownMenuSeparator />
                                 <DropdownMenuItem>Perfil</DropdownMenuItem>
                                 <Link href="/admin/courses">
-                                    <DropdownMenuItem>ADM</DropdownMenuItem>
+                                    <DropdownMenuItem>Adm</DropdownMenuItem>
                                 </Link>
                                 <DropdownMenuItem>Meus cursos</DropdownMenuItem>
                                 <DropdownMenuItem onClick={handleLogout} className="bg-red text-white">Sair</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
-
                     </div>
                 </div>
             </div>
