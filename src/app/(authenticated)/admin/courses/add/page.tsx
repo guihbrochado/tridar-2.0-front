@@ -3,7 +3,7 @@ import React, { useState, FormEvent } from "react";
 import DefaultLayout from "@/components/AdminComponents/DefaultLayout";
 import Breadcrumb from "@/components/AdminComponents/Breadcrumbs/Breadcrumb";
 import { Switch } from "@/components/ui/switch";
-import { InputWithLabel } from "../../../../components/InputWithLabel";
+import { InputWithLabel } from "@/components/InputWithLabel";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import {
   Select,

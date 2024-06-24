@@ -1,7 +1,7 @@
 import React from "react";
 import DefaultLayout from "@/components/AdminComponents/DefaultLayout";
 import Breadcrumb from "@/components/AdminComponents/Breadcrumbs/Breadcrumb";
-import { InputWithLabel } from "../../../../../components/InputWithLabel";
+import { InputWithLabel } from "../../../../../../components/InputWithLabel";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import { useRouter } from "next/router";

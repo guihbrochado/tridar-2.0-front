@@ -94,7 +94,7 @@ const menuGroups = [
         label: "Lives",
         route: "#",
         children: [
-          { label: "Lives", route: "/admin/courses" },
+          { label: "Lives", route: "/admin/lives" },
           // { label: "Módulos", route: "/admin/modules" },
           // { label: "Aulas", route: "/admin/lessons" },
         ],
