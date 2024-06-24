@@ -7,7 +7,7 @@ import CourseCardInfo from "@/components/CourseCardInfo";
 
 export default function SeusCursos() {
     return (
-        <div className="w-full px-10 mt-5">
+        <div className="container max-w-1680 mx-10 px-10 mt-5">
             <div className="container mx-auto p-4">
                 <Hero />
             </div>

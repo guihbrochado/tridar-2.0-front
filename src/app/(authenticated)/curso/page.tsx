@@ -15,7 +15,7 @@ export default function Curso() {
     const [divActive, setDivActive] = useState(2);
 
     return (
-        <div className="w-full px-10 mt-5">
+        <div className="container max-w-1680 mx-10 px-10 mt-5">
             <Hero />
 
             <div className="flex flex-row p-4 ">
@@ -81,7 +81,7 @@ export default function Curso() {
                                         Yes. Free to use for personal and commercial projects. No attribution
                                         required.
                                     </CollapsibleContent>
-                                </Collapsible>                              
+                                </Collapsible>
                             </div>
                         </div>
                         <CourseCardInfo />

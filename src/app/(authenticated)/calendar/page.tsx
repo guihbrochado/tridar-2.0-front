@@ -8,7 +8,7 @@ import CalendarPage from "@/components/CalendarPage";
 
 export default function Calendar() {
     return (
-        <div className="w-full items-center justify-center">
+        <div className="container max-w-1680 mx-10 items-center justify-center">
             <Hero />
             <div className="flex">
                 <div className="container mx-auto p-4">

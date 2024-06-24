@@ -4,7 +4,7 @@ import VideoCard from "../../../components/VideoCard";
 
 export default function Videos() {
     return (
-        <div className="w-full px-10 mt-5">
+        <div className="max-w-1680 mx-10 px-10 mt-5">
             <div className="p-4">
                 <p className="text-gray-light text-sm mb-1">Veja os vídeos da Tridar 🔥</p>
                 <p className="text-white text-xl mb-2 font-bold">Vídeos</p>
@@ -18,11 +18,11 @@ export default function Videos() {
             <div className="p-4">
                 <h2 className="text-white text-xl mb-4 font-bold"> <Dot /> Últimos Lançamentos</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-                   <VideoCard />
-                   <VideoCard />
-                   <VideoCard />
-                   <VideoCard />
-                   <VideoCard />                 
+                    <VideoCard />
+                    <VideoCard />
+                    <VideoCard />
+                    <VideoCard />
+                    <VideoCard />
                 </div>
             </div>
         </div>
