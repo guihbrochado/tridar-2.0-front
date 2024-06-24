@@ -54,7 +54,9 @@ export default function Header() {
                                 <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
                                 <DropdownMenuSeparator />
                                 <DropdownMenuItem>Perfil</DropdownMenuItem>
-                                <DropdownMenuItem>Definição</DropdownMenuItem>
+                                <Link href="/admin/courses">
+                                    <DropdownMenuItem>ADM</DropdownMenuItem>
+                                </Link>
                                 <DropdownMenuItem>Meus cursos</DropdownMenuItem>
                                 <DropdownMenuItem onClick={handleLogout} className="bg-red text-white">Sair</DropdownMenuItem>
                             </DropdownMenuContent>
