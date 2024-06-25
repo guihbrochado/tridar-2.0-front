@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, FormEvent } from "react";
+import React, { useState } from "react";
 import DefaultLayout from "@/components/AdminComponents/DefaultLayout";
 import Breadcrumb from "@/components/AdminComponents/Breadcrumbs/Breadcrumb";
 import { Switch } from "@/components/ui/switch";
@@ -13,37 +13,55 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+import dayjs from 'dayjs';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const CourseAdd = () => {
+  const { register, handleSubmit } = useForm();
+
   const [certification, setCertification] = useState(false);
-  const [status, setStatus] = useState(false);
   const [isFree, setIsFree] = useState(false);
+  const [status, setStatus] = useState(true);
   const [courseLevel, setCourseLevel] = useState("");
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    formData.append("certification", certification.toString());
-    formData.append("status", status.toString());
-    formData.append("isFree", isFree.toString());
-    formData.append("courseLevel", courseLevel);
+  async function handleCreateCourse(data: any) {
 
-    console.log("Form Data Entries:", Array.from(formData.entries()));
+     try {
+      const bodyReady = {
+        course: data.course,
+        courselevel: parseInt(courseLevel, 10), 
+        duration: parseInt(data.duration, 10),
+        expiration: dayjs(data.expiration).format('YYYY-MM-DD'),
+        price: parseFloat(data.price),
+        cover: "url_da_imagem", 
+        description: data.description,
+        status,
+        certification,
+        tags: data.tags || "tag1, tag2", 
+        isfree: isFree
+      };
 
-    try {
       const response = await fetch('http://homologacao.tridar.log.br/courses', {
-        method: 'POST',
-        body: formData,
+        method: 'POST',        
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bodyReady),
       });
 
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
 
-      const data = await response.json();
-      console.log("Response Data:", data);
+      const responseData = await response.json();
+      toast.success("Curso criado com sucesso!");
+
+      console.log("Response Data:", responseData);
     } catch (error) {
+      toast.error("Falha ao criar o Curso!");
+
       console.error("Submission Error:", error);
     }
   }
@@ -54,8 +72,8 @@ const CourseAdd = () => {
 
       <div className="flex flex-row sm:grid-cols-2 ">
         <div className="flex flex-col gap-5">
-          <div className="w-full p-4 rounded-sm border border-stroke bg-black text-white shadow-default dark:border-strokedark dark:bg-boxdark">
-            <form onSubmit={onSubmit}>
+          <form onSubmit={handleSubmit(handleCreateCourse)}>
+            <div className="w-full p-4 rounded-sm border border-stroke bg-black text-white shadow-default dark:border-strokedark dark:bg-boxdark">
               <div className="p-6.5">
                 <div className="mb-4.5 flex flex-row gap-6 xl:flex-row">
                   <div className="w-full xl:w-1/2">
@@ -64,6 +82,7 @@ const CourseAdd = () => {
                       placeholder="Digite o nome do curso..."
                       type="text"
                       name="course"
+                      register={register}
                       children={<Icon.Video size={21} color="gray" />}
                     />
                   </div>
@@ -73,6 +92,7 @@ const CourseAdd = () => {
                       label="Capa do curso"
                       placeholder="Envie a capa do curso..."
                       type="file"
+                      register={register}
                       name="cover"
                       children={<Icon.Image size={21} color="gray" />}
                     />
@@ -85,6 +105,7 @@ const CourseAdd = () => {
                       label="Duração do curso"
                       placeholder="Digite a duração do curso..."
                       type="text"
+                      register={register}
                       name="duration"
                       children={<Icon.Clock size={21} color="gray" />}
                     />
@@ -95,7 +116,7 @@ const CourseAdd = () => {
                       Nível do curso
                     </label>
                     <Select onValueChange={(value) => setCourseLevel(value)}>
-                      <SelectTrigger className="w-full bg-gray-dark border-0 ">
+                      <SelectTrigger className="w-full bg-gray-dark border-0">
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-dark text-white">
@@ -113,6 +134,7 @@ const CourseAdd = () => {
                       label="Preço do curso"
                       placeholder="Digite o preço do curso..."
                       type="text"
+                      register={register}
                       name="price"
                       children={<Icon.Money size={21} color="gray" />}
                     />
@@ -122,6 +144,7 @@ const CourseAdd = () => {
                       label="Expiração do curso"
                       placeholder="Digite a expiração do curso..."
                       type="date"
+                      register={register}
                       name="expiration"
                       children={<Icon.Calendar size={21} color="gray" />}
                     />
@@ -167,9 +190,9 @@ const CourseAdd = () => {
                     Descrição
                   </label>
                   <textarea
-                    name="description"
                     rows={3}
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-white outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    {...register('description')}
                   ></textarea>
                 </div>
 
@@ -184,8 +207,8 @@ const CourseAdd = () => {
                   </button>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </DefaultLayout>

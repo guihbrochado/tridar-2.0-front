@@ -7,6 +7,7 @@ import TableOne from "@/components/AdminComponents/Tables/TableOne";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/AdminComponents/DefaultLayout";
 import Link from "next/link";
+import { toast } from 'react-toastify';
 
 
 export default function CoursesList(data: any) {
@@ -23,13 +24,17 @@ export default function CoursesList(data: any) {
         const token = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VySWQiOjI0MDJ9.SmFulMVQv0gIfKphXFpHvEGSeZVUk96aWplwnHAIyRI';
 
         try {
-            await fetch(`http://homologacao.tridar.log.br/courses/${selectedId}`, {
+            const response = await fetch(`http://homologacao.tridar.log.br/courses/${selectedId}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: token
                 }
             })
+            console.log(response)
+            toast.success("Curso deletado com sucesso!");
         } catch (error) {
+            toast.success("Falha ao deletar curso!");
+
             console.log(error)
         }
 
