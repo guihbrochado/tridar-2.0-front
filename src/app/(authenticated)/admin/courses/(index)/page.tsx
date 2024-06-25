@@ -29,7 +29,7 @@ export default async function CoursesPage() {
             <div className="flex flex-row mb-5 justify-end">
                 <Link className="bg-white text-black px-4 py-2 rounded-lg" href="/admin/courses/add">Adicionar Curso</Link>
             </div>
-            <div className="flex flex-col gap-10 ">
+            <div className="flex flex-col gap-10">
                 <div className="rounded-sm border border-stroke bg-gray-dark px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
                     <h4 className="mb-6 text-xl font-semibold text-white dark:text-white">
                         Top Channels
@@ -56,7 +56,7 @@ export default async function CoursesPage() {
 
                         <CoursesList data={data} />
 
-                     
+
                     </div>
                 </div>
             </div>

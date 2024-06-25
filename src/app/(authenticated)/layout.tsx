@@ -1,6 +1,7 @@
-"use client"
+'use client';
 
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { usePathname } from 'next/navigation';
 import Header from "@/components/Header";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,18 +11,8 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-    const [showHeader, setShowHeader] = useState(true);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const path = window.location.pathname;
-            if (path === '/admin/courses') {
-                setShowHeader(false);
-            } else {
-                setShowHeader(true);
-            }
-        }
-    }, [window]);
+    const pathname = usePathname();
+    const showHeader = pathname !== '/admin/courses';
 
     return (
         <div className="h-screen w-full lg:grid lg:grid-cols-1">

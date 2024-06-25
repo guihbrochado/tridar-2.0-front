@@ -12,7 +12,7 @@ export default function DefaultLayout({
   return (
     <>
       {/* <!-- ===== Page Wrapper Start ===== --> */}
-      <div className="flex max-w-1680 mx-10 h-screen overflow-hidden">
+      <div className="flex w-full overflow-hidden">
         {/* <!-- ===== Sidebar Start ===== --> */}
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         {/* <!-- ===== Sidebar End ===== --> */}
