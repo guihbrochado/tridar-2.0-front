@@ -13,7 +13,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
-// import { useCourseStore } from "@/zustand/course/courseStore";
 import { Course } from "@/@types/courseTypes";
 import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';

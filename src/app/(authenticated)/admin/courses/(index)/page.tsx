@@ -1,7 +1,5 @@
 import React from "react";
-import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Breadcrumb from "@/components/AdminComponents/Breadcrumbs/Breadcrumb";
-import TableOne from "@/components/AdminComponents/Tables/TableOne";
 
 import { Metadata } from "next";
 import DefaultLayout from "@/components/AdminComponents/DefaultLayout";
