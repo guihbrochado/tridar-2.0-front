@@ -16,6 +16,7 @@ import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { Course } from "@/@types/courseTypes";
+import validation from "../../validation";
 
 interface Props {
   params: {

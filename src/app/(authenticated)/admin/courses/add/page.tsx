@@ -16,6 +16,7 @@ import Link from "next/link";
 import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import validation from '../validation'
 
 const CourseAdd = () => {
   const { register, handleSubmit } = useForm();
@@ -23,45 +24,64 @@ const CourseAdd = () => {
   const [certification, setCertification] = useState(false);
   const [isFree, setIsFree] = useState(false);
   const [status, setStatus] = useState(true);
-  const [courseLevel, setCourseLevel] = useState("");
+  const [courseLevel, setCourseLevel] = useState<number | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File>();
 
 
   async function handleCreateCourse(data: any) {
+    console.log(data);
 
-     try {
-      const bodyReady = {
-        course: data.course,
-        courselevel: parseInt(courseLevel, 10), 
-        duration: parseInt(data.duration, 10),
-        expiration: dayjs(data.expiration).format('YYYY-MM-DD'),
-        price: parseFloat(data.price),
-        cover: "url_da_imagem", 
-        description: data.description,
-        status,
-        certification,
-        tags: data.tags || "tag1, tag2", 
-        isfree: isFree
-      };
+    if (!validation(data, selectedFile, courseLevel, isFree)) {
+      return;
+    }
 
-      const response = await fetch('http://homologacao.tridar.log.br/courses', {
-        method: 'POST',        
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(bodyReady),
+    try {
+      const formData = new FormData();
+      formData.append("myImage", selectedFile);
+      const response = await fetch('/api/image', {
+        method: 'POST',
+        body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log(responseData);
+
+        const bodyReady = {
+          course: data.course,
+          courselevel: parseInt(courseLevel, 10),
+          duration: parseInt(data.duration, 10),
+          expiration: dayjs(data.expiration).format('YYYY-MM-DD'),
+          price: parseFloat(data.price),
+          cover: responseData.files.myImage.newFilename, // Assuming this is the correct field
+          description: data.description,
+          status,
+          certification,
+          tags: data.tags || "tag1, tag2",
+          isfree: isFree
+        };
+
+        const createCourseResponse = await fetch('http://homologacao.tridar.log.br/courses', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(bodyReady),
+        });
+
+        if (!createCourseResponse.ok) {
+          throw new Error(`Error: ${createCourseResponse.statusText}`);
+        }
+
+        const courseResponseData = await createCourseResponse.json();
+        toast.success("Curso criado com sucesso!");
+        console.log("Response Data:", courseResponseData);
+      } else {
+        const errorData = await response.json();
+        toast.error(`Failed to upload file: ${errorData.error}`);
       }
-
-      const responseData = await response.json();
-      toast.success("Curso criado com sucesso!");
-
-      console.log("Response Data:", responseData);
-    } catch (error) {
+    } catch (error: any) {
       toast.error("Falha ao criar o Curso!");
-
       console.error("Submission Error:", error);
     }
   }
@@ -92,8 +112,7 @@ const CourseAdd = () => {
                       label="Capa do curso"
                       placeholder="Envie a capa do curso..."
                       type="file"
-                      register={register}
-                      name="cover"
+                      onChange={(e) => setSelectedFile(e.target.files?.[0])}
                       children={<Icon.Image size={21} color="gray" />}
                     />
                   </div>

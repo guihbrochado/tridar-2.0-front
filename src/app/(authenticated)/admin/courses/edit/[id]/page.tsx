@@ -17,6 +17,7 @@ import { Course } from "@/@types/courseTypes";
 import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import validation from '../../validation'
 
 interface Props {
   params: {
@@ -32,6 +33,7 @@ export default function CourseEdit({ params }: Props) {
   const [status, setStatus] = useState(false);
   const [isFree, setIsFree] = useState(false);
   const [courseLevel, setCourseLevel] = useState('');
+  const [selectedFile, setSelectedFile] = useState<File>();
 
   async function getData() {
     const token = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VySWQiOjI0MDJ9.SmFulMVQv0gIfKphXFpHvEGSeZVUk96aWplwnHAIyRI';
@@ -67,8 +69,12 @@ export default function CourseEdit({ params }: Props) {
 
   }, []);
 
-  async function handleUpdateCourse(data: any) {
+  async function handleUpdateCourse(data: any) {       
     const token = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VySWQiOjI0MDJ9.SmFulMVQv0gIfKphXFpHvEGSeZVUk96aWplwnHAIyRI';
+
+    if (!validation(data, selectedFile, courseLevel, isFree)) {
+      return;
+    }
 
     try {
       const bodyReady = {
@@ -137,8 +143,7 @@ export default function CourseEdit({ params }: Props) {
                       label="Capa do curso"
                       placeholder="Envie a capa do curso..."
                       type="file"
-                      name="cover"
-                      register={register}
+                      onChange={(e) => setSelectedFile(e.target.files?.[0])}
                       children={<Icon.Image size={21} color="gray" />}
                     />
                   </div>

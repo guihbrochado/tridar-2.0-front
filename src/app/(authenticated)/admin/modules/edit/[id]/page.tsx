@@ -16,6 +16,7 @@ import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { Course } from "@/@types/courseTypes";
+import validation from "../../validation";
 
 interface Props {
   params: {
@@ -74,6 +75,9 @@ export default function ModuleEdit({ params }: Props) {
 
 
   async function handleUpdateModule(data: any) {
+    if (!validation(data, courseSelect)) {
+      return;
+    }
     const token = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VySWQiOjI0MDJ9.SmFulMVQv0gIfKphXFpHvEGSeZVUk96aWplwnHAIyRI';
 
     try {

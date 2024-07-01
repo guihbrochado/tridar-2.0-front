@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { Course } from "@/@types/courseTypes";
+import validation from "../validation";
 
 const ModuleAdd = () => {
   const { register, handleSubmit } = useForm();
@@ -23,6 +24,10 @@ const ModuleAdd = () => {
   const [courseSelect, setCourseSelect] = useState("");
 
   async function handleCreateModule(data: any) {
+    if (!validation(data, courseSelect)) {
+      return;
+    }
+
     const token = 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VySWQiOjI0MDJ9.SmFulMVQv0gIfKphXFpHvEGSeZVUk96aWplwnHAIyRI';
 
     try {
